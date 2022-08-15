@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block body %}
+
+
+
+
+<!--<div class="card mb-3" style="max-width: 540px;">-->
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="{{movie.img.url}}" class="card-img" alt="..."  width="150px">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.name}}</h5>
+        <p class="card-text">{{movie.desc}}</p>
+        <a href="{% url 'movieapp:update' movie.id %}" class="btn btn-primary">UPDATE</a>
+      <a href="{% url 'movieapp:delete' movie.id %}" class="btn btn-primary">DELETE</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+</body>
+</html>
